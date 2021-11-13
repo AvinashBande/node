@@ -39,7 +39,7 @@ pipeline {
                 steps {
                     sh """ 
                         sed -i 's@BUILD@'"${env.IMAGE}"'@' docker-compose.yml
-                        cat docker-compose.yaml
+                        cat docker-compose.yml
                         docker-compose up -d
                     """
                 } 
