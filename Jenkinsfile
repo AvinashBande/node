@@ -11,7 +11,7 @@ pipeline {
         script {
         env.ECRREPOURI = "633925767990.dkr.ecr.us-east-1.amazonaws.com/node"
         env.DOCKERPUSHURL = "https://633925767990.dkr.ecr.us-east-1.amazonaws.com/node"
-        env.TAG = "development" + "${BUILD_NUMBER}"
+        env.TAG = "development-" + "${BUILD_NUMBER}"
         echo "Tag : ${env.TAG}"
         env.IMAGE = "${env.ECRREPOURI}" + ":" + "${env.TAG}"
                 }
