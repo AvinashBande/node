@@ -5,6 +5,7 @@ services:
     ports:
       - "80:3000"
     container_name: nodeapp_container
+    restart: unless-stopped
     networks:
      - frontend
 networks:
